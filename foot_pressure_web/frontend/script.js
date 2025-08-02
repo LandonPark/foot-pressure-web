@@ -1,5 +1,5 @@
 // 백엔드 API 주소
-const API_ENDPOINT = "http://127.0.0.1:8000/analyze";
+const API_ENDPOINT = "https://foot-pressure-web.onrender.com/analyze";
 
 // --- DOM 요소 가져오기 ---
 const fileInput = document.getElementById("fileInput");
