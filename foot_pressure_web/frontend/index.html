@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>족저압 분석기 Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>족저압 분석기 (WebApp)</h1>
+            <p>분석할 족저압 데이터(.json) 파일을 선택해주세요.</p>
+        </header>
+
+        <main>
+            <div class="controls">
+                <input type="file" id="fileInput" accept=".json" class="file-input">
+                <label for="fileInput" class="file-label">파일 선택</label>
+                <button id="analyzeBtn" class="analyze-button">분석 시작</button>
+            </div>
+            <p id="fileName" class="file-name-display"></p>
+
+            <div id="results" class="results-container hidden">
+                <h2>분석 결과</h2>
+                <div class="results-content">
+                    <div class="image-section">
+                        <h3>분석 리포트</h3>
+                        <div id="imageSpinner" class="spinner-container hidden">
+                            <div class="spinner"></div>
+                            <p>분석 중입니다...</p>
+                        </div>
+                        <img id="resultImage" src="" alt="분석 결과 이미지" class="result-image hidden">
+                    </div>
+                    <div class="table-section">
+                        <h3>상세 정보</h3>
+                        <table id="resultTable">
+                            <thead>
+                                <tr>
+                                    <th>항목</th>
+                                    <th>왼쪽 발</th>
+                                    <th>오른쪽 발</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- 데이터는 script.js에서 채워집니다 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="error-message" class="error-message hidden"></div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 PodoAnalyzer Web. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+python-multipart
+numpy
+matplotlib
+scipy
+Pillow
+python-magic
+gunicorn
